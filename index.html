@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <script src="script.js"></script>
+<head>
+    <title>RSA Encryption and Decryption</title>
+</head>
+<body>
+    <h1>RSA Encryption and Decryption</h1>
+
+    <div>
+        <label for="p">Enter prime number p:</label>
+        <input type="text" id="p" placeholder="e.g., 61" /><br>
+
+        <label for="q">Enter prime number q:</label>
+        <input type="text" id="q" placeholder="e.g., 53" /><br>
+
+        <label for="e">Enter public exponent e:</label>
+        <input type="text" id="e" placeholder="e.g., 17" /><br>
+
+        <button id="generateKey">Generate Private Key</button>
+    </div>
+
+    <div id="result">
+        <h2>Generated Private Key</h2>
+        <p>n: <span id="nValue"></span></p>
+        <p>e: <span id="publicExponent"></span></p>
+        <p>d: <span id="privateExponent"></span></p>
+        <p>p: <span id="pValue"></span></p>
+        <p>q: <span id="qValue"></span></p>
+    </div>
+
+    <div id="encryption">
+        <h2>Encryption</h2>
+        <label for="message">Enter message (m1, m2, m3, m4):</label>
+        <input type="text" id="message" placeholder="e.g., 111111" /><br>
+
+        <label for="e">Enter public exponent (e):</label>
+        <input type="text" id="e" placeholder="e.g., 3" /><br>
+
+        <label for="n">Enter modulus (n):</label>
+        <input type="text" id="n" placeholder="e.g., 9173503" /><br>
+
+        <button id="encrypt">Encrypt</button>
+        <p>Encrypted messages (c1, c2, c3, c4): <span id="encryptedMessages"></span></p>
+    </div>
+
+    <div id="decryption">
+        <h2>Decryption</h2>
+        <label for="encryptedMessage">Enter encrypted message (c1, c2, c3, c4):</label>
+        <input type="text" id="encryptedMessage" placeholder="e.g., 4051753" /><br>
+
+        <label for="d">Enter private exponent (d):</label>
+        <input type="text" id="d" placeholder="e.g., 6111579" /><br>
+
+        <label for="nDecryption">Enter modulus (n):</label>
+        <input type="text" id="nDecryption" placeholder="e.g., 9173503" /><br>
+
+        <button id="decrypt">Decrypt</button>
+        <p>Decrypted messages (m1, m2, m3, m4): <span id="decryptedMessages"></span></p>
+    </div>
+</body>
+</html>
