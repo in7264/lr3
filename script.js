@@ -47,15 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
         var n = p * q;
         var phi = (p - 1) * (q - 1);
 
-        // Найдем приватную экспоненту d, которая обратно к e по модулю phi
+        // Шукаємо приватну експоненту d, яка обернена до e по модулю phi
         var d = modInverse(e, phi);
 
         return {
             n: n, // модуль
-            e: e, // открытая экспонента
-            d: d, // приватная экспонента
-            p: p, // простое число p
-            q: q  // простое число q
+            e: e, // відкрита экспонента
+            d: d, // приватна экспонента
+            p: p, // просте число p
+            q: q  // просте число q
         };
     }
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return x;
             }
         }
-        return null; // Если обратная экспонента не найдена
+        return null; // якщо обернена експонента не знайдена
     }
 
     document.getElementById("generateKey").addEventListener("click", function () {
